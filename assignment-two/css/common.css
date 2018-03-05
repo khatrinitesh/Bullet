@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin-bottom: 20px;
+}
+
+
+ul,ol{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.clr::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.fleft{
+	float: left;
+}
+
+.fright{
+	float: right;
+}
+
+/* start */
+.list_circle,
+.list_square,
+.list_dimaond{
+	margin: 0 0 20px;
+	counter-reset: step;
+}
+
+.list_circle li,
+.list_square li,
+.list_dimaond li{
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.list_circle li::before,
+.list_square li::before,
+.list_dimaond li::before{
+	width: 32px;
+	height: 32px;
+	background-color: #000;
+	color: #fff;
+	line-height: 32px;
+	text-align: center;
+	content:counter(step);
+	counter-increment: step;
+	margin: 0 20px 0 0;
+	border: 4px solid #ccc;
+	display: inline-block;
+	color: #fff;
+}
+
+
+.list_circle li::before{
+	border-radius: 50%;
+}
+
+.list_dimaond li::before{
+	-webkit-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
